@@ -1,3 +1,3 @@
 # wtech23
 
-https://mzarutskiy.github.io/wtech23/Mid_Term.2.html
+https://mzarutskiy.github.io/wtech23/Mid_Term_2.html
