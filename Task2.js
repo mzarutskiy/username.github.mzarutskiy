@@ -1,35 +1,41 @@
 function verify() {
+    console.log("a, b, c")
+    let a = parseInt(elementA.value);
+    let b = parseInt(elementB.value);
+    let c = parseInt(elementC.value);
+    console.log(a, b, c)
 
-    let a = parseInt(document.getElementById("a").value);
-    let b = parseInt(document.getElementById("b").value);
-    let c = parseInt(document.getElementById("c").value);
+    let low, high
+    if (a < b) {
+        low = a;
+        high = b;
+    }
+    else {
+        low = b;
+        high = a;
+    }
 
-    if (a < b && b < c) {
-        let result = "выполняется неравенство A < B < C";
-        document.getElementById('result').innerText = result;
-        document.getElementsByName('result')[0].value = result;
-        check = true;
-    } else if (a > b && b > c) {
-        let result = "выполняется неравенство A > B > C";
-        document.getElementById('result').innerText = result;
+    if (c >= low && c <= high) {
+        result = " С принадлежит заданному диапазону"
+        document.getElementById("result").innerText = messageText + result;
         document.getElementsByName('result')[0].value = result;
         check = true;
     } else {
-        let result = "ни одно из неравенств не выполняется";
-        document.getElementById('result').innerText = result;
+        result = " С не принадлежит заданному диапазону"
+        document.getElementById("result").innerText = messageText + result;
         document.getElementsByName('result')[0].value = result;
-        check = true;
+        check = false;
     }
 }
 
 function send() {
     if (check) {
-        let textCondition = document.getElementById('result').innerText;
+        let textCondition = document.getElementsByTagName('p')[0].innerText
         document.getElementsByName('formulation')[0].value = textCondition;
         document.getElementsByName('result')[0].value = result;
         document.getElementById("UserEnter").submit();
     } else {
-        alert("Повторите ввод");
+        alert("Есть недостатки. Повторите ввод")
     }
 }
 
@@ -38,6 +44,9 @@ function verify_send() {
     send();
 }
 
+let messageText = document.getElementById("result").innerText
+console.log(messageText)
+let result;
 let check = false;
 
 const elementA = document.getElementById("a");
@@ -50,4 +59,4 @@ const elementC = document.getElementById("c");
 elementC.addEventListener('input', verify);
 
 const elementSend = document.getElementById("send");
-elementSend.addEventListener('click', verify_send);
+elementSend.addEventListener('click', verify_send)

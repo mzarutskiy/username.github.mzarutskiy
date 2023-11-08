@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <ul><a href="./Mid_Term_1.1.html" target="_self">Биография</a></ul>
+        <ul><a href="./Mid_Term_1.2.html" target="_self">Фильмы</a></ul>
+        <ul><a href="./Mid_Term_1.1.html#awards" target="_self">Награды</a></ul>
+        <ul><a href="./Mid_Term_1.3.html" target="_self"><img src="alan0.jpg" height="150px"></a></ul>
+        <ul><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B8%D0%BA%D0%BC%D0%B0%D0%BD,_%D0%90%D0%BB%D0%B0%D0%BD"
+                target="_blank">Подробнее</a></ul>
+        <ul><a href="./Mid_Term_1.html" target="_self">На главную</a></ul>
+        <ul><a href="./Mid_Term_1.6.html" target="_self"><b><em>Обратная связь</em></b></a></ul>
+    </ul>
+
+    <h3 align="center">Форма обратной связи</h3>
+
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+
+        <p>Для поисковика:<input type="Text" name="q" value="search"></p>
+
+        <p>Имя и фамилия: <input type="Text" name="last_name" size=30 value=""></p>
+
+        <p>Возраст: <input type="Number" name="age" size=20 value=""></p>
+
+        <p>Город проживания:
+            <input type="Radio" name="place" value="Moscow" checked>Москва и МО
+            <input type="Radio" name="place" value="Kaliningrag">Калининград
+            <input type="Radio" name="place" value="Drugoe">Другие города
+        </p>
+
+        <p>Статус:
+            <input type="Checkbox" name="job" value="Student">Студент
+            <input type="Checkbox" name="job" value="Worker">Работающий
+            <input type="Checkbox" name="job" value="Pensioner">Пенсионер
+        </p>
+
+        <p>Читали или смотрели ли Вы Гарри Поттера на английском?
+            <select name="english">
+                <OPTION value="Да">Да</OPTION>
+                <OPTION value="Нет">Нет</OPTION>
+            </select>
+        </p>
+
+        <p>Пожелания к сайту
+            <br>
+            <TEXTAREA cols=80 name="textarea" rows=4></TEXTAREA>
+        </p>
+
+        <p>Дата рождения: <input type="date" name="user_date" value='1990-01-01'></p>
+
+        <p>Телeфон: <input type="Number" name="number" size=10 value=""></p>
+
+        <p>Пароль: <input type="password" name="password" size=9 value=""></p>
+
+        <input type="hidden" name="function" value="page">
+        <input type="hidden" name="page_id" value="3">
+
+        <p>
+            <input type="Reset" name="Reset" value="Обновить">
+            <input type="Submit" name="submit" value="Отправить">
+        </p>
+
+    </form>
+
+</body>
+
+</html>
